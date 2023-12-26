@@ -1,5 +1,10 @@
 import "./App.css";
-import { UseCallback, UseContext, UseDebugValue } from "./components/hooks";
+import {
+  UseCallback,
+  UseContext,
+  UseDebugValue,
+  UseDefferedValue,
+} from "./components/hooks";
 
 function App() {
   return (
@@ -8,6 +13,7 @@ function App() {
       <UseCallback />
       <UseContext />
       <UseDebugValue />
+      <UseDefferedValue />
     </>
   );
 }
