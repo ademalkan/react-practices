@@ -10,6 +10,10 @@ const UseCallback = () => {
   return (
     <>
       <h1>useCallback</h1>
+      <p>
+        useCallback is a React Hook that lets you cache a function definition
+        between re-renders.
+      </p>
       <div>Count: {count}</div>
       <button onClick={handleClick}>Increment</button>
     </>
