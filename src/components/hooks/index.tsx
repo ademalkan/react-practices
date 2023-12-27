@@ -7,3 +7,4 @@ export { default as UseId } from "./useId";
 export { default as UseImperativeHandle } from "./useImperativeHandle";
 export { default as UseOptimistic } from "./useOptimistic";
 export { default as UseReducer } from "./useReducer";
+export { default as UseRef } from "./useRef";

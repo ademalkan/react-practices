@@ -9,6 +9,7 @@ import {
   UseImperativeHandle,
   UseOptimistic,
   UseReducer,
+  UseRef,
 } from "./components/hooks";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <UseImperativeHandle/>
       <UseOptimistic/>
       <UseReducer/>
+      <UseRef/>
     </>
   );
 }
