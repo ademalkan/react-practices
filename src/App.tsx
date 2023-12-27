@@ -8,6 +8,7 @@ import {
   UseId,
   UseImperativeHandle,
   UseOptimistic,
+  UseReducer,
 } from "./components/hooks";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <UseId />
       <UseImperativeHandle/>
       <UseOptimistic/>
+      <UseReducer/>
     </>
   );
 }
