@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-
+import styles from "./style.module.css";
 type DescriptionContainerProps = {
   title: string;
   description: string;
@@ -12,11 +12,11 @@ const DescriptionContainer: React.FC<DescriptionContainerProps> = ({
   children,
 }) => {
   return (
-    <>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <div>{children}</div>
-    </>
+    <div className={styles.container}>
+      <h1 className={styles.title}>{title}</h1>
+      <p className={styles.container}>{description}</p>
+      <div className={styles.content}>{children}</div>
+    </div>
   );
 };
 
