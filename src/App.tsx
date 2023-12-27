@@ -6,18 +6,21 @@ import {
   UseDefferedValue,
   UseEffect,
   UseId,
+  UseImperativeHandle,
 } from "./components/hooks";
 
 function App() {
   return (
     <>
-      <div>Hello, this application have a all react hooks</div>
+      <h2>Hello, this application have a all react hooks</h2>
+      <hr />
       <UseCallback />
       <UseContext />
       <UseDebugValue />
       <UseDefferedValue />
       <UseEffect />
       <UseId />
+      <UseImperativeHandle/>
     </>
   );
 }
