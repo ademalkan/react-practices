@@ -1,16 +1,23 @@
 import { useDebugValue, useState } from "react";
 
-const useCounter = () => {
-  const [count, setCount] = useState(0);
+type Counter = {
+  incrementHandler: () => void;
+  decrementHandler: () => void;
+  count: number;
+};
 
-  useDebugValue(count > 0 ? "Positive number" : "Zero or negative number");
+const useCounter = (): Counter => {
+  const [count, setCount] = useState<number>(0);
 
-  const incrementHandler = () => {
+  const incrementHandler = (): void => {
     setCount(count + 1);
   };
-  const decrementHandler = () => {
+
+  const decrementHandler = (): void => {
     setCount(count - 1);
   };
+
+  useDebugValue(count > 0 ? "Positive number" : "Zero or negative number");
 
   return { incrementHandler, decrementHandler, count };
 };
