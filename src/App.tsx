@@ -4,6 +4,7 @@ import {
   UseContext,
   UseDebugValue,
   UseDefferedValue,
+  UseEffect,
 } from "./components/hooks";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <UseContext />
       <UseDebugValue />
       <UseDefferedValue />
+      <UseEffect />
     </>
   );
 }

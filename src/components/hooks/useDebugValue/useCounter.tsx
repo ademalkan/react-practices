@@ -9,15 +9,13 @@ type Counter = {
 const useCounter = (): Counter => {
   const [count, setCount] = useState<number>(0);
 
-  const incrementHandler = (): void => {
-    setCount(count + 1);
-  };
+  const incrementHandler = (): void => setCount(count + 1);
 
-  const decrementHandler = (): void => {
-    setCount(count - 1);
-  };
+  const decrementHandler = (): void => setCount(count - 1);
 
-  useDebugValue(count > 0 ? "Positive number" : "Zero or negative number");
+  const debugValue = count > 0 ? "Positive number" : "Zero or negative number";
+
+  useDebugValue(debugValue);
 
   return { incrementHandler, decrementHandler, count };
 };

@@ -1,10 +1,11 @@
 import { createContext, useContext, useState } from "react";
+import DescriptionContainer from "../../DescriptionContainer";
 
 type ThemeType = "black" | "white";
 
 const UseContext = () => {
   const [theme, setTheme] = useState<ThemeType>("white");
-  
+
   const ThemeContext = createContext(theme);
   const activeTheme = useContext(ThemeContext);
 
@@ -12,22 +13,19 @@ const UseContext = () => {
     setTheme("black");
   };
 
+  const title = `useContext`;
+  const description = ` useContext is a React Hook that lets you read and subscribe to
+  context from your component.`;
+
   return (
-    <>
-      <ThemeContext.Provider value={theme}>
-        <div style={{ backgroundColor: activeTheme }}>
-          <h1>useContext</h1>
-          <p>
-            useContext is a React Hook that lets you read and subscribe to
-            context from your component.
-          </p>
-          <div>
-            <button onClick={setBlackTheme}>Switch to black theme</button>
-            <div>Theme: {activeTheme}</div>
-          </div>
-        </div>
-      </ThemeContext.Provider>
-    </>
+    <ThemeContext.Provider value={theme}>
+      <div style={{ backgroundColor: activeTheme }}>
+        <DescriptionContainer title={title} description={description}>
+          <button onClick={setBlackTheme}>Switch to black theme</button>
+          <div>Theme: {activeTheme}</div>
+        </DescriptionContainer>
+      </div>
+    </ThemeContext.Provider>
   );
 };
 

@@ -1,21 +1,18 @@
+import DescriptionContainer from "../../DescriptionContainer";
 import useCounter from "./useCounter";
 
 const UseDebugValue = () => {
   const { count, decrementHandler, incrementHandler } = useCounter();
 
+  const title = `useDebugValue`;
+  const description = `useDebugValue is a React Hook that lets you display a label for custom hooks in React DevTools.`;
+
   return (
-    <>
-      <h1>useDebugValue</h1>
-      <p>
-        useDebugValue is a React Hook that lets you add a label to a custom Hook
-        in React DevTools.
-      </p>
-      <div>
-        <div>Counter: {count}</div>
-        <button onClick={incrementHandler}>Increment</button>
-        <button onClick={decrementHandler}>Decrement</button>
-      </div>
-    </>
+    <DescriptionContainer title={title} description={description}>
+      <div>Counter: {count}</div>
+      <button onClick={incrementHandler}>Increment</button>
+      <button onClick={decrementHandler}>Decrement</button>
+    </DescriptionContainer>
   );
 };
 
